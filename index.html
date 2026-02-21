@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spnvisualz 2.0 – Futuristic E‑Commerce</title>
+    <!--
+      The stylesheet defines the dark, neon‑inspired look and feel.  Using a
+      separate CSS file makes it easy to tweak colours or add breakpoints
+      later without touching your HTML.
+    -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header & navigation.  A fixed position keeps the navigation visible
+         while scrolling.  The brand name links back to the home page. -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="brand">spnvisualz&nbsp;2.0</a>
+        <nav class="nav-links">
+          <a href="index.html" class="nav-item active">Home</a>
+          <a href="products.html" class="nav-item">Products</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+        <div class="cart-icon">
+          <a href="cart.html" aria-label="Shopping cart">
+            <!-- simple inline SVG for a cart icon -->
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+              <path d="M7 4h-2l-3 9h18l-3-9h-2"></path>
+              <circle cx="10" cy="20" r="2"></circle>
+              <circle cx="18" cy="20" r="2"></circle>
+            </svg>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero section.  The background image is set in CSS.  The overlay gives
+         the text enough contrast to stand out against the vivid graphic. -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content container">
+          <h1 class="hero-title">Experience the Future of Shopping</h1>
+          <p class="hero-subtitle">
+            Discover cutting‑edge products and immersive experiences on
+            spnvisualz&nbsp;2.0.  Browse our curated collection of
+            high‑tech gadgets and elevate your lifestyle.
+          </p>
+          <a href="products.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured products.  For a real store these cards would be
+         generated dynamically from an API or database.  Here we hard code
+         three examples to illustrate the layout. -->
+    <section class="products">
+      <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="product-grid">
+          <!-- Smartwatch -->
+          <div class="product-card">
+            <img src="assets/product-watch.png" alt="Futuristic Smartwatch" />
+            <h3 class="product-name">Futuristic Smartwatch</h3>
+            <p class="product-description">
+              A wearable powered by AI with holographic display,
+              biometric sensors and seamless connectivity.
+            </p>
+            <div class="product-price">$299</div>
+            <button class="btn btn-secondary add-to-cart" data-id="watch" data-name="Futuristic Smartwatch" data-price="299" data-image="assets/product-watch.png">Add&nbsp;to&nbsp;Cart</button>
+          </div>
+          <!-- Headset -->
+          <div class="product-card">
+            <img src="assets/product-headset.png" alt="Immersive Headset" />
+            <h3 class="product-name">Immersive Headset</h3>
+            <p class="product-description">
+              Dive into virtual worlds with crystal‑clear sound and
+              integrated holographic AR features.
+            </p>
+            <div class="product-price">$399</div>
+            <button class="btn btn-secondary add-to-cart" data-id="headset" data-name="Immersive Headset" data-price="399" data-image="assets/product-headset.png">Add&nbsp;to&nbsp;Cart</button>
+          </div>
+          <!-- Smartphone -->
+          <div class="product-card">
+            <img src="assets/product-phone.png" alt="Holo Smartphone" />
+            <h3 class="product-name">Holo Smartphone</h3>
+            <p class="product-description">
+              A next‑gen smartphone with holographic projection and
+              quantum encryption technology.
+            </p>
+            <div class="product-price">$699</div>
+            <button class="btn btn-secondary add-to-cart" data-id="phone" data-name="Holo Smartphone" data-price="699" data-image="assets/product-phone.png">Add&nbsp;to&nbsp;Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer with minimal links and copyright notice -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> spnvisualz 2.0 &ndash; All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
