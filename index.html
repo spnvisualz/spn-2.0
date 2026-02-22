@@ -1,109 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spnvisualz 2.0 – Futuristic E‑Commerce</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SPNVISUALZ</title>
+  <meta name="description" content="SPNVISUALZ — Luxury motion-first creative studio." />
+  <meta name="theme-color" content="#050608" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="page page-main">
+  <header class="hero" id="top">
     <!--
-      The stylesheet defines the dark, neon‑inspired look and feel.  Using a
-      separate CSS file makes it easy to tweak colours or add breakpoints
-      later without touching your HTML.
+      Apply a 'parallax' class to background layers so they respond subtly
+      to scroll events via JavaScript.  This adds depth without impacting
+      performance or distracting from the content.
     -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Header & navigation.  A fixed position keeps the navigation visible
-         while scrolling.  The brand name links back to the home page. -->
-    <header class="navbar">
-      <div class="container nav-container">
-        <a href="index.html" class="brand">spnvisualz&nbsp;2.0</a>
-        <nav class="nav-links">
-          <a href="index.html" class="nav-item active">Home</a>
-          <a href="products.html" class="nav-item">Products</a>
-          <a href="about.html" class="nav-item">About</a>
-          <a href="contact.html" class="nav-item">Contact</a>
-        </nav>
-        <div class="cart-icon">
-          <a href="cart.html" aria-label="Shopping cart">
-            <!-- simple inline SVG for a cart icon -->
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-              <path d="M7 4h-2l-3 9h18l-3-9h-2"></path>
-              <circle cx="10" cy="20" r="2"></circle>
-              <circle cx="18" cy="20" r="2"></circle>
-            </svg>
-            <span id="cart-count" class="cart-count">0</span>
+    <div class="bg-cosmic parallax" aria-hidden="true"></div>
+    <div class="grain parallax" aria-hidden="true"></div>
+
+    <nav class="nav">
+      <a class="nav-brand" href="#top">SPNVISUALZ</a>
+      <div class="nav-links">
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero-center">
+      <div class="hero-life" aria-hidden="true"></div>
+      <div class="hero-orbit" aria-hidden="true"></div>
+
+      <img class="hero-logo chrome-sweep float"
+           src="./assets/images/spnvisualz.PNG"
+           alt="SPNVISUALZ"
+           draggable="false" />
+
+      <div class="hero-cta">
+  <a class="btn btn-ghost" href="work.html">View Work</a>
+  <a class="btn btn-ghost" href="#pricing">View Packages</a>
+  <a class="btn btn-solid" href="booking.html">Book Now</a>
+</div>
+
+        <!-- Social proof -->
+        <p class="social-proof">Trusted by rising artists &amp; visionary labels</p>
+    </section>
+  </header>
+
+  <main>
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <h2 class="section-title">Packages &amp; Pricing</h2>
+
+        <!-- Authority positioning block -->
+        <div class="authority-block">
+          <p class="authority-headline">Motion Design for Visionaries</p>
+          <ul class="authority-list">
+            <li>Logo &amp; Brand Identity</li>
+            <li>Intro &amp; Loop Animations</li>
+            <li>Visual Packs &amp; Bundles</li>
+            <li>Creative Direction</li>
+          </ul>
+        </div>
+
+        <div class="badges">
+          <div class="badge badge-green">💚 LAUNCH SALE – UP TO 80%</div>
+          <div class="badge badge-silver">💎 BUNDLE DEAL – UP TO 20% OFF</div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Regular packages (80% off) -->
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Logo — Basic</h3>
+                <div class="prices"><span class="old">€70</span><span class="new green">€14</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Best for</span><span>Artists / quick identity</span></div>
+                <div class="detail-row"><span>Includes</span><span>Chrome logo export pack</span></div>
+                <div class="detail-row"><span>Use</span><span>IG, Spotify, watermark</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Logo — Premium</h3>
+                <div class="prices"><span class="old">€140</span><span class="new green">€28</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Best for</span><span>Full brand presence</span></div>
+                <div class="detail-row"><span>Includes</span><span>More polish + variants</span></div>
+                <div class="detail-row"><span>Use</span><span>Web, merch, profiles</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Intro — Standard</h3>
+                <div class="prices"><span class="old">€90</span><span class="new green">€18</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Best for</span><span>Reels / shorts</span></div>
+                <div class="detail-row"><span>Includes</span><span>Short motion intro</span></div>
+                <div class="detail-row"><span>Use</span><span>Open your content</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Intro — Premium</h3>
+                <div class="prices"><span class="old">€170</span><span class="new green">€34</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Best for</span><span>High-impact opener</span></div>
+                <div class="detail-row"><span>Includes</span><span>Premium motion polish</span></div>
+                <div class="detail-row"><span>Use</span><span>YouTube / campaigns</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Loops — Basic</h3>
+                <div class="prices"><span class="old">€110</span><span class="new green">€22</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Includes</span><span>Seamless loop</span></div>
+                <div class="detail-row"><span>Use</span><span>Story / promo backgrounds</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Loops — Premium</h3>
+                <div class="prices"><span class="old">€190</span><span class="new green">€38</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Includes</span><span>More depth + texture</span></div>
+                <div class="detail-row"><span>Use</span><span>Brand loops / drops</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Visuals — Social</h3>
+                <div class="prices"><span class="old">€85</span><span class="new green">€17</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Includes</span><span>Social visual pack</span></div>
+                <div class="detail-row"><span>Use</span><span>Posts / reels graphics</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+                <h3>Visuals — Brand</h3>
+                <div class="prices"><span class="old">€150</span><span class="new green">€30</span></div>
+                <div class="save">Save 80%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Includes</span><span>Brand-grade visuals</span></div>
+                <div class="detail-row"><span>Use</span><span>Campaign system</span></div>
+              </div>
+            </button>
+          </article>
+
+          <!-- Bundles (20% off max) -->
+          <article class="card expandable bundle" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+              <h3>Starter</h3>
+                <div class="prices"><span class="old">€210</span><span class="new silver">€168</span></div>
+                <div class="save">Save 20%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Best for</span><span>Launch kit</span></div>
+                <div class="detail-row"><span>Includes</span><span>Logo + intro + social pack</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable bundle featured" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+              <h3>Professional</h3>
+                <div class="prices"><span class="old">€300</span><span class="new silver">€240</span></div>
+                <div class="save">Save 20%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Best for</span><span>Consistency</span></div>
+                <div class="detail-row"><span>Includes</span><span>Creator pack + loops</span></div>
+              </div>
+            </button>
+          </article>
+
+          <article class="card expandable bundle" data-card>
+            <button class="card-btn" type="button" aria-expanded="false">
+              <div class="card-top">
+              <h3>Signature</h3>
+                <div class="prices"><span class="old">€420</span><span class="new silver">€336</span></div>
+                <div class="save">Save 20%</div>
+              </div>
+              <div class="details" aria-hidden="true">
+                <div class="detail-row"><span>Best for</span><span>Brand foundation</span></div>
+                <div class="detail-row"><span>Includes</span><span>Full brand system</span></div>
+              </div>
+            </button>
+          </article>
+        </div>
+
+        <div class="delivery">
+          <div class="delivery-box">
+            <div class="delivery-title">Delivery</div>
+            <div class="delivery-row"><span>Standard</span><span>3–5 days</span></div>
+            <div class="delivery-row"><span>Express</span><span>24–48h <strong>+€40</strong></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Let’s Build Something Unreal.</h2>
+        <!-- Tagline is wrapped with inline styling to ensure centering across
+             different rendering contexts.  By setting margin auto and
+             constraining the width, the line sits confidently beneath the
+             heading. -->
+        <p class="contact-tagline" style="max-width:600px;margin:0 auto;text-align:center;">Serious inquiries only.</p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="https://instagram.com/spnvisualz" target="_blank" rel="noreferrer">
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">@spnvisualz</div>
+          </a>
+          <a class="contact-card" href="mailto:spnvisualz@gmail.com">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">spnvisualz@gmail.com</div>
           </a>
         </div>
-      </div>
-    </header>
 
-    <!-- Hero section.  The background image is set in CSS.  The overlay gives
-         the text enough contrast to stand out against the vivid graphic. -->
-    <section class="hero">
-      <div class="hero-overlay">
-        <div class="hero-content container">
-          <h1 class="hero-title">Experience the Future of Shopping</h1>
-          <p class="hero-subtitle">
-            Discover cutting‑edge products and immersive experiences on
-            spnvisualz&nbsp;2.0.  Browse our curated collection of
-            high‑tech gadgets and elevate your lifestyle.
-          </p>
-          <a href="products.html" class="btn btn-primary">Shop Now</a>
-        </div>
+        <footer class="footer">
+          <img class="footer-logo" src="./assets/images/chubae.PNG" alt="CHUBAE" draggable="false" />
+          <div class="footer-text">CHUBAE — Founder, SPNVISUALZ</div>
+        </footer>
       </div>
     </section>
-
-    <!-- Featured products.  For a real store these cards would be
-         generated dynamically from an API or database.  Here we hard code
-         three examples to illustrate the layout. -->
-    <section class="products">
-      <div class="container">
-        <h2 class="section-title">Featured Products</h2>
-        <div class="product-grid">
-          <!-- Smartwatch -->
-          <div class="product-card">
-            <img src="assets/product-watch.png" alt="Futuristic Smartwatch" />
-            <h3 class="product-name">Futuristic Smartwatch</h3>
-            <p class="product-description">
-              A wearable powered by AI with holographic display,
-              biometric sensors and seamless connectivity.
-            </p>
-            <div class="product-price">$299</div>
-            <button class="btn btn-secondary add-to-cart" data-id="watch" data-name="Futuristic Smartwatch" data-price="299" data-image="assets/product-watch.png">Add&nbsp;to&nbsp;Cart</button>
-          </div>
-          <!-- Headset -->
-          <div class="product-card">
-            <img src="assets/product-headset.png" alt="Immersive Headset" />
-            <h3 class="product-name">Immersive Headset</h3>
-            <p class="product-description">
-              Dive into virtual worlds with crystal‑clear sound and
-              integrated holographic AR features.
-            </p>
-            <div class="product-price">$399</div>
-            <button class="btn btn-secondary add-to-cart" data-id="headset" data-name="Immersive Headset" data-price="399" data-image="assets/product-headset.png">Add&nbsp;to&nbsp;Cart</button>
-          </div>
-          <!-- Smartphone -->
-          <div class="product-card">
-            <img src="assets/product-phone.png" alt="Holo Smartphone" />
-            <h3 class="product-name">Holo Smartphone</h3>
-            <p class="product-description">
-              A next‑gen smartphone with holographic projection and
-              quantum encryption technology.
-            </p>
-            <div class="product-price">$699</div>
-            <button class="btn btn-secondary add-to-cart" data-id="phone" data-name="Holo Smartphone" data-price="699" data-image="assets/product-phone.png">Add&nbsp;to&nbsp;Cart</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer with minimal links and copyright notice -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> spnvisualz 2.0 &ndash; All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  </main>
+    </main>
+    <script src="./script.js"></script>
+</body>
 </html>
